@@ -7,7 +7,9 @@ app.get('/', function (req, res) {
     res.json({ a: 1 });
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+const ApplicationPort = process.env.PORT || 3000;
+
+app.listen(ApplicationPort, function () {
+  console.log(`Example app listening on port ${ApplicationPort}!`);
 });
 
